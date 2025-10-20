@@ -66,9 +66,3 @@ Compile your assembly files using the Docker image.
 ```bash
 docker run --rm -v $(pwd):/src dasm dasm main.asm -omain.prg
 ```
-
-If you used a custom image name during build, replace `dasm` with your image name:
-
-```bash
-docker run --rm -v $(pwd):/src my-dasm dasm main.asm -omain.prg
-```
