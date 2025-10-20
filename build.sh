@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DEFAULT_VERSION="2.20.14.1"
+DEFAULT_VERSION="2.20.15"
 DEFAULT_CACHE="cache"
 DEFAULT_IMAGE="dasm"
 
@@ -46,7 +46,7 @@ else
   if [ $HAS_CURL -eq 1 ]
   then
     curl --version | head -n 1
-    curl -L -o "$FILE" "$URL" || exit 1
+    curl -f -L -o "$FILE" "$URL" || exit 1
   else
     wget --version | head -n 1
     wget -P "$CACHE" "$URL" || exit 1
